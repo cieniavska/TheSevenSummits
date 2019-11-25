@@ -1,0 +1,32 @@
+.motivation {
+    width: 100vw;
+    height: 100vh;
+    background-color: $motivation;
+
+    div {
+        width: 100%;
+        height: 100%;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+
+        h2 { 
+            padding: 50px;
+            text-align: center;
+            font-size: 3.5rem;
+            color: $text;
+        }
+
+        button {
+            color: $text;
+            font-size: 3rem;
+            width: 200px;
+            height: 100px;
+            border: 5px solid grey;
+            border-radius: 50px;
+            background-color: transparent;
+        }
+
+        
+    }
+}

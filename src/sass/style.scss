@@ -1,11 +1,25 @@
 @import './utils/colors';
+@import './utils/fonts';
 @import './utils/reset';
 @import './utils/flex';
 
 @import './components/banner';
+@import './components/introduction';
+@import './components/knowledge';
+@import './components/presentation';
+@import './components/location';
+@import './components/weather';
+@import './components/motivation';
+@import './components/motivationRange';
+@import './components/checkmarks';
+@import './components/game';
+
+
+
 
 
 body, html {
+    font-family: 'Roboto', sans-serif;
     font-size: 16px;
     color: $text;
 }
