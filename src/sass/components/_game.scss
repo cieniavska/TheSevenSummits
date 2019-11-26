@@ -20,6 +20,15 @@
     &__box {
         width: 600px;
         height: 400px;
-        border: 3px solid $text;
+        border: 10px solid $text;
+        background-image: url(../images/mountain-game.png);
+        background-size: cover;
+        position: relative;
+        svg {
+            position: absolute;
+            bottom: 0;
+            width: 100px;
+            height: 100px;
+        }
     }
 }
