@@ -14,15 +14,26 @@ import Game from './components/Game';
 
 
 class App extends Component {
+
+    state = {
+        index: 0
+    }
+
+    changeIndex = (newIndex) => {
+        this.setState({
+            index: newIndex
+        })
+    }
+
     render() {
         return (
             <>
                 <Header/>
                 <Introduction/>
-                <Location/>
+                <Location index={this.state.index} changeIndex={this.changeIndex}/>
                 <Presentation/>
                 <Knowledge/>
-                <Weather/>
+                <Weather index={this.state.index}/>
                 <Motivation/>
                 <MotivationRange/>
                 <CheckMarks/>

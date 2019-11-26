@@ -6,7 +6,6 @@ class Location extends Component {
     state = {
         latitude: '',
         longitude: '',
-        index: 0,
         msg: ''
     }
 
@@ -49,10 +48,11 @@ class Location extends Component {
     success = (position) => {
         const {latitude, longitude} = position.coords;
         let newIndex = this.findClosestMountain(mountains,latitude,longitude);
+        this.props.changeIndex(newIndex);
         this.setState({
             latitude,
             longitude,
-            index: newIndex,
+            // index: newIndex,
             msg: 'Found your location'
         })
     }
@@ -85,7 +85,7 @@ class Location extends Component {
                     <button id="find-me" onClick={this.geoFindMe}>Ok!</button>
                     <p id = "status">{this.state.msg}</p>
                     <a id = "map-link">Your Latitude: {this.state.latitude}°, Your Longitude: {this.state.longitude}°</a>
-                    <h3>Your mountain from the mighty seven is {mountains[this.state.index].name}</h3>
+                    <h3>Your mountain from the mighty seven is {mountains[this.props.index].name}</h3>
                 </div>
             </section>
         )
