@@ -1,4 +1,5 @@
 import React, {Component} from "react";
+import mountains from "../data/mountains";
 
 class Game extends Component {
     render() {

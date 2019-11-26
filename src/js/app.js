@@ -31,7 +31,7 @@ class App extends Component {
                 <Header/>
                 <Introduction/>
                 <Location index={this.state.index} changeIndex={this.changeIndex}/>
-                <Presentation/>
+                <Presentation index={this.state.index}/>
                 <Knowledge/>
                 <Weather index={this.state.index}/>
                 <Motivation/>
