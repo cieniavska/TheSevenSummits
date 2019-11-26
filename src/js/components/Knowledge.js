@@ -28,8 +28,8 @@ class Knowledge extends Component {
     render() {
         return (
             <section className="knowledge">
-                <div className="flex">
-                    <h2>Let's check out your knowledge!</h2>
+                <div className="lists-container flex">
+                <h2>Let's check out your knowledge!</h2>
                     {/* <button>Ok!</button> */}
                     <div className="lists flex">
                         <ul className="list">{this.state.mountainList}</ul>
