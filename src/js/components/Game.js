@@ -6,7 +6,7 @@ class Game extends Component {
             <section className="game">
                 <div className="flex">
                     <h2>We think you're ready. Let's play!</h2>
-                    <button>Ok!</button>
+                    <section class="game__box"></section>
                 </div>
             </section>
         )

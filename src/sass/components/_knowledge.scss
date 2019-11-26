@@ -10,9 +10,9 @@
         flex-direction: column;
 
         h2 { 
-            padding: 50px;
+            padding: 30px;
             text-align: center;
-            font-size: 4rem;
+            font-size: 3.5rem;
             color: $text;
         }
 
@@ -33,7 +33,7 @@
 .lists {
     width: 60%;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     flex-direction: row;
 
     .list {
