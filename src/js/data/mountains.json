@@ -1,0 +1,30 @@
+[
+    {"name": "Mount Everest",
+        "latitude": 27.986065,
+        "longitude": 86.922623
+    },
+    {   "name": "Aconaguga",
+        "latitude":  -32.861243,
+        "longitude": -68.86795
+    },
+    {   "name": "Mt McKinley",
+        "latitude": 63.540777,
+        "longitude": -151.723614
+    },
+    {   "name": "Kilimanjaro",
+        "latitude": -3.065274,
+        "longitude": 37.359076
+    },
+    {   "name": "Mt Blanc",
+        "latitude": 45.832119,
+        "longitude": 6.865575
+    },
+    {   "name": "Mt Vinson",
+        "latitude": -78.525483,
+        "longitude": -85.617147
+    },
+    {   "name": "Mt Kosciuszko",
+        "latitude":  -36.45592,
+        "longitude": 148.263587
+    }
+]

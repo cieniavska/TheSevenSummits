@@ -1,1 +1,10 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+// @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+
+@font-face {
+    font-family: 'sitkaregular';
+    src: url('./../fonts/sitka-regular/sitka-regular-webfont.woff2') format('woff2'),
+    url('./../fonts/sitka-regular/sitka-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
