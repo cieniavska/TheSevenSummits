@@ -1,7 +1,19 @@
 import React, {Component} from "react";
 
 class MotivationRange extends Component {
+
+    state = {
+        dragging: false,
+        percentage: 50
+    }
+
     render() {
+        const progressStyle = {
+            transform: 'scaleX(' + this.state.percentage/100 + ')'
+        }
+        const thumbStyle = {
+            
+        }
         return (
             <section className="motivationRange flex">
                     <div className="container">
