@@ -2,6 +2,12 @@ import React, {Component} from "react";
 import mountains from "../data/mountains";
 
 class Game extends Component {
+
+    startGame = () => {
+        
+    }
+
+
     render() {
         return (
             <section className="game">

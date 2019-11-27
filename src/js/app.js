@@ -38,7 +38,7 @@ class App extends Component {
                 <Motivation/>
                 <MotivationRange/>
                 <CheckMarks/>
-                <Game/>
+                <Game index={this.state.index}/>
             </>
         )
     }
