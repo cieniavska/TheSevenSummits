@@ -7,14 +7,24 @@ class Knowledge extends Component {
 
     state = {
         mountainList: [],
-        rankingList: []
+        rankingList: [],
+        msg: ""
     }
 
+
     moveMountains = (item, name) => {
+
         const newRankingList = [...this.state.rankingList,item];
         this.setState({
             rankingList: newRankingList
-        });
+        }, () => {
+            if (JSON.stringify(this.state.rankingList) === JSON.stringify(mountains)) {
+                this.setState({
+                    msg: "Impressive! That is correct!"
+                })
+            }
+        }
+        );
         this.removeItem(name);
     }
 
@@ -41,12 +51,12 @@ class Knowledge extends Component {
     }
 
     render() {
+    
         const newArrayList = this.state.mountainList.map(element => <li className="list-item" id={element.name} key={element.name} onClick={event => this.moveMountains(element, element.name)}>{element.name}</li>)
         return (
             <section className="knowledge">
                 <div className="lists-container flex">
                 <h2><Text text="Let's check out your knowledge - sort from the highest to lowest"/></h2>
-                    {/* <button>Ok!</button> */}
                     <div className="lists flex">
                         <ul className="list">{newArrayList}</ul>
                         <ul className="list">
@@ -59,7 +69,7 @@ class Knowledge extends Component {
                             <li id="7"className="list-item">7</li>
                         </ul>
                         <ul className="list">{this.state.rankingList.map((element)=> <li className="list-item" id={element.name} key={element.name}>{element.name}</li>)}</ul>
-
+                        <p className="message">{this.state.msg}</p>
                     </div>
                 </div>
             </section>

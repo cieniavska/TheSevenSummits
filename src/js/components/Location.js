@@ -83,8 +83,8 @@ class Location extends Component {
         if (this.props.index !== null) {
             successDisplay = (<>
             <p id = "status">{this.state.msg}</p>
-            <a id = "map-link">Your Latitude: {this.state.latitude}°, Your Longitude: {this.state.longitude}°</a>
-            <h3>The mountain you're going to climb from the mighty seven is ... </h3>
+            <a id = "map-link">Latitude: {this.state.latitude}°,Longitude: {this.state.longitude}°</a>
+            <h3>The mountain you're going to climb is ... </h3>
             <a href="#presentation" className="arrowLocation" onClick={e => this.props.clickArrowLocation(e)}>&darr;</a>
             </>)
         }

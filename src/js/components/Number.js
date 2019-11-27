@@ -7,7 +7,7 @@ class Number extends Component {
     }
 
     componentDidMount(){
-        this.interval = setInterval(() => { this.state.num >= parseFloat(this.props.number) ? clearInterval(this.interval) :  this.setState({num: this.state.num + 100})
+        this.interval = setInterval(() => { this.state.num >= parseFloat(this.props.number) ? clearInterval(this.interval) :  this.setState({num: this.state.num + 50})
         },50);
         console.log(this.state.num);
         console.log(this.props.number)
