@@ -9,7 +9,7 @@ class Introduction extends Component {
         return (
             <section className="introduction">
                 <div className="flex">
-                    <p><Text text="Welcome to the website"/></p>
+                    <p><Text text="Welcome! Thank you for visiting and joining the challenge. Every big hike requires a big preparation. There are few things that we need to check before we let you climb your summit. Are you ready?"/></p>
                 </div>
             </section>
         )

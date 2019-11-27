@@ -1,4 +1,7 @@
 header {
+    background-image: linear-gradient(to right, rgba(255,0,0,0), rgb(163, 18, 86)),url(../images/header2.jpg);
+    opacity: .5;
+    background-size: cover;
     background-color: $banner;
     width: 100vw;
     height: 100vh;
@@ -11,7 +14,7 @@ header {
     align-items: center;
     justify-content: center;
         &__title {
-            padding-top: 60px;
+            padding-top: 170px;
             text-align: center;
             font-family: 'sitkaregular', cursive;
             font-size: 5rem;
@@ -20,11 +23,11 @@ header {
             opacity: 0;
         }
         svg {
-            height: 800px;
-            width: 800px;
-            top:10%;
+            height: 500px;
+            width: 500px;
+            top:0;
             right:0;
-            bottom:0;
+            bottom: -17%;
             left:0;
             margin: auto;
             position: absolute;
@@ -34,28 +37,28 @@ header {
             }
 
             path:first-child {
-                stroke-width: 7px;
+                stroke-width: 20px;
                 stroke-dasharray: 3000;
                 stroke-dashoffset: 3000;
                 animation: 5s logoAnimation forwards 1s;
             }
 
             path:nth-child(2) {
-                stroke-width: 7px;
+                stroke-width: 10px;
                 stroke-dasharray: 3000;
                 stroke-dashoffset: 3000;
                 animation: 5s logoAnimation forwards;
             }
             
             path:nth-child(3) {
-                stroke-width: 7px;
+                stroke-width: 12px;
                 stroke-dasharray: 3000;
                 stroke-dashoffset: 3000;
                 animation: 8s logoAnimation forwards 3s;
             }
             
             path:nth-child(4) {
-                stroke-width: 5px;
+                stroke-width: 12px;
                 stroke-dasharray: 1000;
                 stroke-dashoffset: 1000;
                 animation: 8s linesAnimation forwards 3s;

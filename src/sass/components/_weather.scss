@@ -17,19 +17,31 @@
         }
 
         span {
-            font-size: 2rem;
+            font-size: 2.7rem;
+            float: left;
         }
 
         button {
-            color: $text;
+            color: $weather;
             font-size: 3rem;
-            width: 200px;
-            height: 100px;
-            border: 5px solid grey;
+            width: 170px;
+            height: 70px;
+            border: 5px solid $weather;
             border-radius: 50px;
-            background-color: transparent;
+            background-color: $text;
+            margin: 10px;
         }
 
-        
+    }
+    .prognosis {
+        flex-direction: column;
+        justify-content: space-evenly;
+        width: 60%;
+    }
+    .temperature, .pressure, .humidity, .clouds, .description, .windSpeed {
+        width: 100%;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
     }
 }

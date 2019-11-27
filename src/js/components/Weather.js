@@ -1,4 +1,5 @@
 import React, {Component} from "react";
+import Text from "./Text";
 import mountains from "../data/mountains";
 
 class Weather extends Component {
@@ -32,14 +33,25 @@ class Weather extends Component {
         return (
             <section className="weather">
                 <div className="flex">
-                    <h2>Let's check out the weather</h2>
+                    <h2><Text text="Let's check out the weather"/></h2>
                     <button onClick={this.showWeather}>Ok!</button>
-                    <span>Temperature: {this.state.temperature}</span>
-                    <span>Pressure: {this.state.pressure} hPa</span>
-                    <span>Humidity: {this.state.humidity} %</span>
-                    <span>Clouds: {this.state.clouds}</span>
-                    <span>Description: {this.state.description}</span>
-                    <span>Wind speed: {this.state.windSpeed} m/s</span>
+                    <div class="prognosis flex">
+                        <div class="temperature flex">
+                            <span>Temperature</span>  
+                            <span>{this.state.temperature}</span>          
+                        </div>
+                        <div class="pressure flex">
+                            <span>Temperature</span>  
+                            <span>{this.state.pressure} hPa</span>          
+                        </div>
+
+                        <span>Temperature: {this.state.temperature}</span>
+                        <span>Pressure: {this.state.pressure} hPa</span>
+                        <span>Humidity: {this.state.humidity} %</span>
+                        <span>Clouds: {this.state.clouds}</span>
+                        <span>Description: {this.state.description}</span>
+                        <span>Wind speed: {this.state.windSpeed} m/s</span>
+                    </div>
 
                 </div>
             </section>
