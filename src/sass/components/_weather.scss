@@ -26,7 +26,6 @@
             font-size: 3rem;
             width: 170px;
             height: 70px;
-            border: 5px solid $weather;
             border-radius: 50px;
             background-color: $text;
             margin: 10px;
@@ -36,7 +35,8 @@
     .prognosis {
         flex-direction: column;
         justify-content: space-evenly;
-        width: 60%;
+        height: 50%;
+        width: 40%;
     }
     .temperature, .pressure, .humidity, .clouds, .description, .windSpeed {
         width: 100%;

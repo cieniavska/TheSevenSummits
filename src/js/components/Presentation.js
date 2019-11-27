@@ -1,4 +1,5 @@
 import React, {Component} from "react";
+import Number from "./Number";
 import mountains from "../data/mountains";
 
 class Presentation extends Component {
@@ -12,7 +13,7 @@ class Presentation extends Component {
                     <path fill="transparent" stroke="black" d="M 600 690 L 780 690 L 670 395 C 670 395 535 690 535 690 C 535 690 420 690 420 690 L 600 245 L 645 355"/>
                     </svg>
                     <h2>{mountains[this.props.index].name}</h2>
-                    <h2>{mountains[this.props.index].altitude} meters above sea level</h2>
+                    <h2><Number number={mountains[this.props.index].altitude}/> meters above sea level</h2>
                 </div>
             </section>
         )

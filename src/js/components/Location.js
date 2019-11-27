@@ -85,7 +85,7 @@ class Location extends Component {
                     <button id="find-me" onClick={this.geoFindMe}>Ok!</button>
                     <p id = "status">{this.state.msg}</p>
                     <a id = "map-link">Your Latitude: {this.state.latitude}°, Your Longitude: {this.state.longitude}°</a>
-                    <h3>Your mountain from the mighty seven is {mountains[this.props.index].name}</h3>
+                    <h3>The mountain you're going to climb from the mighty seven is ... {mountains[this.props.index].name}</h3>
                 </div>
             </section>
         )

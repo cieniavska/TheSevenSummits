@@ -35,22 +35,37 @@ class Weather extends Component {
                 <div className="flex">
                     <h2><Text text="Let's check out the weather"/></h2>
                     <button onClick={this.showWeather}>Ok!</button>
-                    <div class="prognosis flex">
-                        <div class="temperature flex">
-                            <span>Temperature</span>  
+                    <div className="prognosis flex">
+                        <div className="temperature flex">
+                            <span>Temperature</span>
+                            <span>&#8680;</span> 
                             <span>{this.state.temperature}</span>          
                         </div>
-                        <div class="pressure flex">
-                            <span>Temperature</span>  
+                        <div className="pressure flex">
+                            <span>Pressure</span>
+                            <span>&#8680;</span>   
                             <span>{this.state.pressure} hPa</span>          
                         </div>
-
-                        <span>Temperature: {this.state.temperature}</span>
-                        <span>Pressure: {this.state.pressure} hPa</span>
-                        <span>Humidity: {this.state.humidity} %</span>
-                        <span>Clouds: {this.state.clouds}</span>
-                        <span>Description: {this.state.description}</span>
-                        <span>Wind speed: {this.state.windSpeed} m/s</span>
+                        <div className="humidity flex">
+                            <span>Humidity</span> 
+                            <span>&#8680;</span>  
+                            <span>{this.state.humidity} %</span>          
+                        </div>
+                        <div className="clouds flex">
+                            <span>Clouds</span>
+                            <span>&#8680;</span>   
+                            <span>{this.state.clouds}</span>          
+                        </div>
+                        <div className="windSpeed flex">
+                            <span>Wind speed</span>
+                            <span>&#8680;</span>   
+                            <span>{this.state.windSpeed} m/s</span>          
+                        </div>
+                        <div className="description flex">
+                            <span>Description</span>
+                            <span>&#8680;</span>   
+                            <span>{this.state.description}</span>          
+                        </div>
                     </div>
 
                 </div>

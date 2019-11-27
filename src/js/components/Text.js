@@ -8,11 +8,14 @@ class Text extends Component {
 
     componentDidMount(){
         this.interval = setInterval(() => {
-            this.setState({
-                index: this.state.index + 1
-            })
+            this.state.index > this.props.text ? clearInterval(this.interval) :  this.setState({index: this.state.index + 1})
         },100)
     }
+
+    componentWillUnmount(){
+        clearInterval(this.interval);
+    }
+
     render() {
         return this.props.text.substr(0,this.state.index)
     }
