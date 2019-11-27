@@ -66,6 +66,26 @@ header {
         }
 }
 
+.arrow {
+    font-size: 4rem;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    animation: arrowMove 1s infinite alternate-reverse;
+}
+
+
+@keyframes arrowMove {
+    from {
+        bottom: 0%;
+    }
+
+    to {
+        bottom: 1.5%;
+    }
+}
+
+
 @keyframes logoAnimation {
     from {
         stroke-dashoffset: 3000;

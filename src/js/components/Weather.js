@@ -11,7 +11,8 @@ class Weather extends Component {
         clouds: '',
         description:'',
         windSpeed: '',
-        windDirection: ''
+        windDirection: '',
+        buttonClicked: false
     }
 
     showWeather = () => {
@@ -25,17 +26,16 @@ class Weather extends Component {
                 clouds: data.clouds.all,
                 description: data.weather[0].description,
                 windSpeed: data.wind.speed,
+                buttonClicked: this.state.buttonClicked === false? true : false
             })
         })
     }
 
     render() {
-        return (
-            <section className="weather">
-                <div className="flex">
-                    <h2><Text text="Let's check out the weather"/></h2>
-                    <button onClick={this.showWeather}>Ok!</button>
-                    <div className="prognosis flex">
+        let weatherDisplay = null
+        if (this.state.buttonClicked === true) {
+                weatherDisplay = ( <>
+                <div className="prognosis flex">
                         <div className="temperature flex">
                             <span>Temperature</span>
                             <span>&#8680;</span> 
@@ -66,8 +66,15 @@ class Weather extends Component {
                             <span>&#8680;</span>   
                             <span>{this.state.description}</span>          
                         </div>
-                    </div>
-
+                </div>
+                </>)
+        }
+        return (
+            <section className="weather">
+                <div className="flex">
+                    <h2><Text text="Let's check out the weather"/></h2>
+                    <button onClick={this.showWeather}>Ok!</button>
+                     {weatherDisplay}   
                 </div>
             </section>
         )

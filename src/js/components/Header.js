@@ -14,6 +14,7 @@ class Header extends Component {
                             <path fill="transparent" stroke="black" d="M 220 750 L 980 750 "/>
                             <path fill="transparent" stroke="black" d="M 220 785 L 980 785 "/>
                         </svg>
+                        <div className="arrow">&darr;</div>
                 </div>
             </header>
         )

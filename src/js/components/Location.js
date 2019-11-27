@@ -78,14 +78,20 @@ class Location extends Component {
     }
 
     render(){
+        let successDisplay = null;
+        if (this.props.index !== null) {
+            successDisplay = (<>
+            <p id = "status">{this.state.msg}</p>
+            <a id = "map-link">Your Latitude: {this.state.latitude}°, Your Longitude: {this.state.longitude}°</a>
+            <h3>The mountain you're going to climb from the mighty seven is ... {mountains[this.props.index].name}</h3>
+            </>)
+        }
         return (
             <section className="location">
                 <div className="flex">
                     <h2>Let's check your location first</h2>
                     <button id="find-me" onClick={this.geoFindMe}>Ok!</button>
-                    <p id = "status">{this.state.msg}</p>
-                    <a id = "map-link">Your Latitude: {this.state.latitude}°, Your Longitude: {this.state.longitude}°</a>
-                    <h3>The mountain you're going to climb from the mighty seven is ... {mountains[this.props.index].name}</h3>
+                    {successDisplay}
                 </div>
             </section>
         )

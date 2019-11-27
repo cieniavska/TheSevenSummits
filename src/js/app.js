@@ -17,7 +17,7 @@ import Game from './components/Game';
 class App extends Component {
 
     state = {
-        index: 0
+        index: null
     }
 
     changeIndex = (newIndex) => {
