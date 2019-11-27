@@ -4,12 +4,17 @@ import Text from "./Text";
 
 class Introduction extends Component {
     
+   
 
     render(){
+        let displayText = null;
+        if (this.props.arrowClicked === true) {
+            displayText = (<p><Text text="Welcome! Thanks for visiting and joining the challenge :) Every big hike requires a solid preparation. There are few things that we need to check before we let you climb your summit. Are you ready?"/></p>);
+        }
         return (
-            <section className="introduction">
+            <section id="introduction" className="introduction">
                 <div className="flex">
-                    <p><Text text="Welcome! Thanks for visiting and joining the challenge. Every big hike requires a solid preparation. There are few things that we need to check before we let you climb your summit. Are you ready?"/></p>
+                    {displayText}
                 </div>
             </section>
         )

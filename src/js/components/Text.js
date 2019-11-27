@@ -9,7 +9,7 @@ class Text extends Component {
     componentDidMount(){
         this.interval = setInterval(() => {
             this.state.index > this.props.text ? clearInterval(this.interval) :  this.setState({index: this.state.index + 1})
-        },100)
+        },70)
     }
 
     componentWillUnmount(){

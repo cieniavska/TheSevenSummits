@@ -5,7 +5,7 @@ import mountains from "../data/mountains";
 class Presentation extends Component {
     render() {
         let indexExists = null;
-        if (this.props.index !== null) {
+        if (this.props.index !== null && this.props.userLocated === true && this.props.arrowLocationClicked === true) {
             indexExists = (
                 <>
                     <h2>{mountains[this.props.index].name}</h2>
@@ -14,7 +14,7 @@ class Presentation extends Component {
             )
         }
         return (
-            <section className="presentation">
+            <section id="presentation" className="presentation">
                 <div className="flex">
                     <h2>Meet your summit</h2>
 

@@ -16,8 +16,12 @@ import Game from './components/Game';
 
 class App extends Component {
 
+
     state = {
-        index: null
+        index: null,
+        arrowClicked: false,
+        userLocated: false,
+        arrowLocationClicked: false,
     }
 
     changeIndex = (newIndex) => {
@@ -26,13 +30,33 @@ class App extends Component {
         })
     }
 
+    clickArrow = () => {
+        this.setState({
+            arrowClicked: true
+        })
+    }
+
+    locateUser = () => {
+        this.setState({
+            userLocated: true
+        })
+    }
+
+    clickArrowLocation = () => {
+        this.setState({
+            arrowLocationClicked: true
+        })
+    }
+
     render() {
+        console.log(this.state.userLocated)
         return (
             <>
-                <Header/>
-                <Introduction/>
-                <Location index={this.state.index} changeIndex={this.changeIndex}/>
-                <Presentation index={this.state.index}/>
+
+                <Header clickArrow={this.clickArrow}/>
+                <Introduction arrowClicked={this.state.arrowClicked}/>
+                <Location index={this.state.index} changeIndex={this.changeIndex} locateUser={this.locateUser} clickArrowLocation={this.clickArrowLocation}/>
+                <Presentation userLocated={this.state.userLocated} arrowLocationClicked={this.state.arrowLocationClicked} index={this.state.index}/>
                 <Knowledge/>
                 <Weather index={this.state.index}/>
                 <Motivation/>

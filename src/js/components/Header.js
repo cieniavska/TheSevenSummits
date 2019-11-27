@@ -1,6 +1,19 @@
 import React, {Component} from "react";
 
 class Header extends Component {
+
+   state = {
+       visible: false
+   }
+
+    componentDidMount = () => {
+        this.timer = setTimeout( ()=> {this.setState({visible: true})},8000) 
+    }
+
+    componentWillUnmount() {
+        clearTimeout(this.timer);
+    }
+
     render() {
         return (
             <header> 
@@ -14,7 +27,7 @@ class Header extends Component {
                             <path fill="transparent" stroke="black" d="M 220 750 L 980 750 "/>
                             <path fill="transparent" stroke="black" d="M 220 785 L 980 785 "/>
                         </svg>
-                        <div className="arrow">&darr;</div>
+                        {this.state.visible === true ? <a href="#introduction" onClick={e => this.props.clickArrow(e)} className="arrow">&darr;</a> : null}
                 </div>
             </header>
         )
