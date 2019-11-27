@@ -32,7 +32,10 @@
     .message {
         color: $weather;
         font-size: 3.5rem;
+        opacity: 0;
+        animation: appear .5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
     }
+
 }
 
 .lists {
@@ -40,6 +43,7 @@
     align-items: center;
     justify-content: center;
     flex-direction: row;
+    z-index: 1;
 
     .list {
         background-color: rgba(0, 0, 0, 0.1);
@@ -57,3 +61,16 @@
     }
 
 }
+
+
+
+
+  @keyframes appear {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  

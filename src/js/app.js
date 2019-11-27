@@ -59,8 +59,8 @@ class App extends Component {
                 <Presentation userLocated={this.state.userLocated} arrowLocationClicked={this.state.arrowLocationClicked} index={this.state.index}/>
                 <Knowledge/>
                 <Weather index={this.state.index}/>
-                <Motivation/>
-                <MotivationRange/>
+                {/* <Motivation/>
+                <MotivationRange/> */}
                 <CheckMarks/>
                 <Game index={this.state.index}/>
             </>

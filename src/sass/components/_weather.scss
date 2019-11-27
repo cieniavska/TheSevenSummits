@@ -2,6 +2,9 @@
     width: 100vw;
     height: 100vh;
     background-color: $weather;
+    background-image: linear-gradient(to right, rgba(255,0,0,0), $weather),url(../images/weather.jpg);
+    background-size: cover;
+    opacity: .8;
 
     div {
         width: 100%;
@@ -13,7 +16,7 @@
         h2 { 
             text-align: center;
             font-size: 3.5rem;
-            color: $text;
+            color: $text2;
         }
 
         span {
@@ -27,7 +30,7 @@
             width: 170px;
             height: 70px;
             border-radius: 50px;
-            background-color: $text;
+            background-color: $text2;
             margin: 10px;
         }
 
@@ -38,10 +41,17 @@
         height: 50%;
         width: 40%;
     }
+
+    .weatherArrow {
+        display: block;
+    }
+
     .temperature, .pressure, .humidity, .clouds, .description, .windSpeed {
+        color: $text2;
         width: 100%;
         flex-direction: row;
         align-items: center;
         justify-content: space-between;
     }
 }
+

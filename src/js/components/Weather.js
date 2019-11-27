@@ -38,32 +38,32 @@ class Weather extends Component {
                 <div className="prognosis flex">
                         <div className="temperature flex">
                             <span>Temperature</span>
-                            <span>&#8680;</span> 
+                            <span className="weatherArrow">&#8680;</span> 
                             <span>{this.state.temperature}</span>          
                         </div>
                         <div className="pressure flex">
                             <span>Pressure</span>
-                            <span>&#8680;</span>   
+                            <span className="weatherArrow">&#8680;</span>   
                             <span>{this.state.pressure} hPa</span>          
                         </div>
                         <div className="humidity flex">
                             <span>Humidity</span> 
-                            <span>&#8680;</span>  
+                            <span className="weatherArrow">&#8680;</span>  
                             <span>{this.state.humidity} %</span>          
                         </div>
                         <div className="clouds flex">
                             <span>Clouds</span>
-                            <span>&#8680;</span>   
+                            <span className="weatherArrow">&#8680;</span>   
                             <span>{this.state.clouds}</span>          
                         </div>
                         <div className="windSpeed flex">
                             <span>Wind speed</span>
-                            <span>&#8680;</span>   
+                            <span className="weatherArrow">&#8680;</span>   
                             <span>{this.state.windSpeed} m/s</span>          
                         </div>
                         <div className="description flex">
                             <span>Description</span>
-                            <span>&#8680;</span>   
+                            <span className="weatherArrow">&#8680;</span>   
                             <span>{this.state.description}</span>          
                         </div>
                 </div>

@@ -2,6 +2,9 @@
     width: 100vw;
     height: 100vh;
     background-color: $presentation;
+    background-image: linear-gradient(to right, rgba(255,0,0,0), rgb(163, 18, 86)),url(../images/presentation.jpg);
+    background-size: cover;
+    opacity: .7;
 
     div {
         width: 100%;
@@ -29,10 +32,10 @@
           
           path {
             stroke: #ccc;
-            stroke-width: 10px;
+            stroke-width: 16px;
             stroke-dasharray: 2000;
             stroke-dashoffset: 2000;
-            animation: 6s mountainAnimation forwards;
+            animation: 10s mountainAnimation forwards;
           }
 
         

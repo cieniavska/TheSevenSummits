@@ -2,6 +2,10 @@
     width: 100vw;
     height: 100vh;
     background-color: $presentation;
+    background-size: cover;
+    opacity: .8;
+    background-image: linear-gradient(to right, rgba(255,0,0,0), rgb(163, 18, 86)),url(../images/game.jpg);
+
 
     div {
         width: 100%;
@@ -26,11 +30,15 @@
             border-radius: 50px;
             background-color: $text;
         }
+
+        p {
+            font-size: 2rem; 
+        }
     }
     &__box {
         width: 800px;
         height: 500px;
-        border: 10px solid $text;
+        border: 2px solid $text;
         background-image: url(../images/game.jpg);
         background-size: cover;
         position: relative;
@@ -52,6 +60,11 @@
             // border-image-source: url(../images/game.jpg);
             // border-image-slice: 713 155;
             border-color: transparent transparent hsl(240, 1%, 42%) transparent;
+        }
+        &__countdown {
+            position: absolute;
+            font-size: 5rem;
+            color: $motivation;
         }
     }
 }

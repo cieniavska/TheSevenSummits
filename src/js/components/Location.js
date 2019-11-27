@@ -53,7 +53,7 @@ class Location extends Component {
             latitude,
             longitude,
             // index: newIndex,
-            msg: 'Found your location'
+            msg: 'We have found your location...'
         })
         this.props.locateUser();
     }
@@ -83,8 +83,8 @@ class Location extends Component {
         if (this.props.index !== null) {
             successDisplay = (<>
             <p id = "status">{this.state.msg}</p>
-            <a id = "map-link">Latitude: {this.state.latitude}°,Longitude: {this.state.longitude}°</a>
-            <h3>The mountain you're going to climb is ... </h3>
+            {/* <a id = "map-link">Latitude: {this.state.latitude}°,Longitude: {this.state.longitude}°</a> */}
+            <h3>Click on the arrow to find out which summit you're going to conquer </h3>
             <a href="#presentation" className="arrowLocation" onClick={e => this.props.clickArrowLocation(e)}>&darr;</a>
             </>)
         }
