@@ -50,8 +50,8 @@
         width: 800px;
         height: 500px;
         border: 2px solid $text;
-        background-image: url(../images/game2.jpg);
-        background-size: cover;
+        // background-image: url(../images/game2.jpg);
+        // background-size: cover;
         position: relative;
         svg {
             position: absolute;
@@ -80,14 +80,10 @@
     }
 }
 
+// background-position-y: 76%;
+// background-position-x: -50%;
+// }
 
-// border-width: 0px 388px 225px;
-// border-image-source: url(images/game.jpg);
-// border-image-slice: 713 155;
-
-// background-size: 160%;
-//     background-position-x: 17%;
-//
 
 @keyframes hikeAnimation {
     from {
