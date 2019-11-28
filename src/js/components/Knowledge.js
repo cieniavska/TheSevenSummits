@@ -47,7 +47,6 @@ class Knowledge extends Component {
         this.setState({
             mountainList: this.createMountainList(mountains)
         })
-        console.log(this.state.mountainList)
     }
 
     render() {

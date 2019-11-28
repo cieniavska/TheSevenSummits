@@ -52,7 +52,6 @@ class Location extends Component {
         this.setState({
             latitude,
             longitude,
-            // index: newIndex,
             msg: 'We have found your location...'
         })
         this.props.locateUser();
