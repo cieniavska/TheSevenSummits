@@ -57,6 +57,9 @@
             padding: 15px 20px;
             text-align: center;
             margin: 4px 0px;
+            &:hover {
+                background: linear-gradient(to right, #f4791f, #659999); 
+            }
         }
     }
 
