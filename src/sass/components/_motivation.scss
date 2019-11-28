@@ -10,6 +10,7 @@
         justify-content: center;
         flex-direction: column;
         &__msg {
+            color: $text2;
             padding: 40px;
             font-size: 3rem;
         }
@@ -18,7 +19,7 @@
             padding: 50px;
             text-align: center;
             font-size: 3.5rem;
-            color: $text;
+            color: $text2;
         }
         .rangeContainer {
             width: 70%;
