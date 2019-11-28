@@ -22,8 +22,21 @@ class Game extends Component {
       console.log(this.state.altitude)
   }
 
-  setAltitude = () => {
-      if (this.props.index != null) {
+//   handleEnter = (e) => {
+//       if (e.key === "Enter" && parseFloat(this.state.altitude) == 10) {
+//         let newAltitudeValue = parseFloat(this.state.altitude) - 1;
+//         let newBackgroundPositionX = parseFloat(this.state.backgroundPositionX) + .2;
+//         if (newAltitudeValue >= 0 && newAltitudeValue < parseFloat(mountains[this.props.index].altitude)) {
+//           this.setState({
+//               altitude: newAltitudeValue,
+//               backgroundPositionX: newBackgroundPositionX
+//           })
+//         }}
+//         console.log("enter")
+//   }
+
+  setAltitude = (e) => {
+      if (this.props.index != null && e.key !== "Enter") {
           this.setState({
               altitude: mountains[this.props.index].altitude,
               goClicked: true
@@ -57,7 +70,7 @@ class Game extends Component {
             <section className="game">
                 <div className="flex">
                     <h2>We think you're ready. Let's play!</h2>
-                    <button onKeyUp={this.handleKeyUp}onClick={this.setAltitude}>Go!</button>
+                    <button onKeyUp={this.handleKeyUp} onClick={this.setAltitude}>Go!</button>
                     <p>Click any key to climb | each click is equal to 100 m.a.s.l </p>
                     <section style={viewStyle}className="game__box">
                         {countdown}

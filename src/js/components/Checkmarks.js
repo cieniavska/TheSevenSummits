@@ -20,7 +20,7 @@ class CheckMarks extends Component {
                         <span>&#10004;</span>
                     </div>
                     <div className="summit flex">
-                        <span>Checked your motivation level</span>
+                        <span>Checked your motivation/fitness level</span>
                         <span>&#10004;</span>
                     </div>
                 </div>
