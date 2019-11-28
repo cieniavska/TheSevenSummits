@@ -9,6 +9,10 @@
         align-items: center;
         justify-content: center;
         flex-direction: column;
+        &__msg {
+            padding: 40px;
+            font-size: 3rem;
+        }
 
         h2 { 
             padding: 50px;
