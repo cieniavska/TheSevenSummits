@@ -16,7 +16,7 @@ class Motivation extends Component {
         let message;
         let arrow;
         if (parseFloat(this.state.range) === 100) {
-            message = (<div className="motivation__container__msg">Wow! that is a lot!</div>)
+            message = (<div className="motivation__container__msg">That is exactly how much motivation we need!</div>)
             arrow = (<a href="#checkmarks" onClick={e => this.props.sumUp(e)}className="motivation__container__arrow">&darr;</a>)
         }
         else if (parseFloat(this.state.range) === 1) {

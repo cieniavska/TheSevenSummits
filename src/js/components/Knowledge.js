@@ -22,8 +22,12 @@ class Knowledge extends Component {
                 this.setState({
                     msg: "Impressive! That is correct!"
                 })
+            } else if (this.state.rankingList.length === 7 && (JSON.stringify(this.state.rankingList) != JSON.stringify(mountains))) {
+                this.setState({
+                    msg: "Mountains are harsh, there is no toleration for mistakes. Reload and try again"
+                })
+                }
             }
-        }
         );
         this.removeItem(name);
     }

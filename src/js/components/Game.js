@@ -55,7 +55,7 @@ class Game extends Component {
                 animation: "makeHikerBigger 4s forwards, centralize 1s linear infinite"
             };
             if (parseFloat(this.state.altitude) < 0) {
-                reachedTop = (<div className="game__top">Congratulations! You have reached the top!</div>)
+                reachedTop = (<div className="game__top">Congratulations! You have reached the top! Now go and challenge yourself in the real life</div>)
             }
         }
         return (
