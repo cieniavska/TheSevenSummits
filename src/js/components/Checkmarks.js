@@ -2,25 +2,39 @@ import React, {Component} from "react";
 import Text from "./Text";
 
 class CheckMarks extends Component {
+
     render() {
+
+        let title;
+        let foundSummit;
+        let checkedKnowledge;
+        let checkedWeather;
+        let checkedMotivation;
+        if (this.props.sumUp === true) {
+            title = ("What have we done so far?");
+            foundSummit = ("Found your summit");
+            checkedKnowledge = ("Checked your knowledge");
+            checkedWeather = ("Checked the weather on top");
+            checkedMotivation = ("Checked your motivation level");
+        }
         return (
-            <section className="checkMarks">
+            <section id="checkmarks" className="checkMarks">
                 <div className="flex">
-                    <h2><Text text="What have we done so far?"/></h2>
+                    <h2>{title}</h2>
                     <div className="summit flex">
-                        <span>Found your summit</span>
+                        <span>{foundSummit}</span>
                         <span>&#10004;</span>
                     </div>
                     <div className="summit flex">
-                        <span>Checked your knowledge</span>
+                        <span>{checkedKnowledge}</span>
                         <span>&#10004;</span>
                     </div>
                     <div className="summit flex">
-                        <span>Checked the weather on the top</span>
+                        <span>{checkedWeather}</span>
                         <span>&#10004;</span>
                     </div>
                     <div className="summit flex">
-                        <span>Checked your motivation level</span>
+                        <span>{checkedMotivation}</span>
                         <span>&#10004;</span>
                     </div>
                 </div>

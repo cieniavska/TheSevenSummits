@@ -6,6 +6,20 @@
     opacity: .8;
     background-image: linear-gradient(to right, rgba(255,0,0,0), rgb(107, 5, 56)),url(../images/game2.jpg);
 
+    &__top {
+        position: absolute;
+        display: flex;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        font-size: 10rem;
+        width: 100vw;
+        height: 100vh;
+        z-index: 1;
+        opacity: .9;
+        background-color: $motivation;
+        color: $text2;
+    }
 
     div {
         width: 100%;

@@ -8,8 +8,9 @@ class Text extends Component {
 
     componentDidMount(){
         this.interval = setInterval(() => {
-            this.state.index > this.props.text ? clearInterval(this.interval) :  this.setState({index: this.state.index + 1})
-        },70)
+            console.log("dziala");
+            parseFloat(this.state.index) >= this.props.text.length ? clearInterval(this.interval) : this.setState({index: this.state.index + 1})
+        },85)
     }
 
     componentWillUnmount(){

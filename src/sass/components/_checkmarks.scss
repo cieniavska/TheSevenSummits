@@ -7,6 +7,9 @@
         width: 40%;
         flex-direction: row;
         justify-content: space-between;
+        opacity: 0;
+        transition: 1s;
+        animation: 8s showCheckmarks forwards 8s;
     }
 
     div {
@@ -26,5 +29,14 @@
             color: $text2;
             font-size: 3rem;
         }
+    }
+}
+
+@keyframes showCheckmarks {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
     }
 }

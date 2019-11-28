@@ -72,7 +72,7 @@ class Weather extends Component {
         return (
             <section className="weather">
                 <div className="flex">
-                    <h2><Text text="Let's check out the weather"/></h2>
+                    <h2>Let's check out the weather</h2>
                     <button onClick={this.showWeather}>Ok!</button>
                      {weatherDisplay}   
                 </div>

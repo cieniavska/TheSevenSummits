@@ -22,6 +22,8 @@ class App extends Component {
         arrowClicked: false,
         userLocated: false,
         arrowLocationClicked: false,
+        motivationChecked: false,
+        sumUp: false
     }
 
     changeIndex = (newIndex) => {
@@ -48,19 +50,30 @@ class App extends Component {
         })
     }
 
+    assessMotivation = () => {
+        this.setState({
+            motivationChecked: true
+        })
+        console.log("Zmiana");
+    }
+
+    sumUp = () => {
+        this.setState({
+            sumUp: true
+        })
+    }
+
     render() {
         return (
             <>
-
                 <Header clickArrow={this.clickArrow}/>
                 <Introduction arrowClicked={this.state.arrowClicked}/>
                 <Location index={this.state.index} changeIndex={this.changeIndex} locateUser={this.locateUser} clickArrowLocation={this.clickArrowLocation}/>
                 <Presentation userLocated={this.state.userLocated} arrowLocationClicked={this.state.arrowLocationClicked} index={this.state.index}/>
                 <Knowledge/>
                 <Weather index={this.state.index}/>
-                <Motivation/>
-                {/* <MotivationRange/> */}
-                <CheckMarks/>
+                <Motivation sumUp={this.sumUp} motivationChecked={this.state.motivationChecked}/>
+                <CheckMarks sumUp={this.state.sumUp}/>
                 <Game index={this.state.index}/>
             </>
         )

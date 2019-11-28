@@ -43,6 +43,9 @@
             margin: 20px;
             text-align: center;
             font-size: 3rem;
+            background: -webkit-linear-gradient($motivation, $weather);
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
         }  
 
         .arrowLocation {
@@ -55,6 +58,12 @@
             font-size: 3.5rem;
             transition: 4s;
             animation: arrowMove .8s infinite alternate;
+            transition: 2s;
+            &:hover {
+                transform: scale(1.2);
+                background: linear-gradient(to right, #f4791f, #659999);
+                border: none;
+            }
         }
         
         

@@ -55,7 +55,7 @@ class Knowledge extends Component {
         return (
             <section className="knowledge">
                 <div className="lists-container flex">
-                <h2><Text text="Let's check out your knowledge - sort from the highest to lowest"/></h2>
+                <h2>Let's check out your knowledge - sort from the highest to lowest</h2>
                     <div className="lists flex">
                         <ul className="list">{newArrayList}</ul>
                         <ul className="list">

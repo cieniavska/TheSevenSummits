@@ -7,13 +7,14 @@ class Game extends Component {
       altitude: 0,
       goClicked: false,
       backgroundPositionX: -50,
-      backgroundPositionY: 76
+      backgroundPositionY: 76,
+      won: false
   }
 
-  handleKeyUp = () => {
+  handleKeyUp = (e) => {
       let newAltitudeValue = parseFloat(this.state.altitude) - 100;
       let newBackgroundPositionX = parseFloat(this.state.backgroundPositionX) + .5;
-      if (newAltitudeValue >= 0 && newAltitudeValue < parseFloat(mountains[this.props.index].altitude)) {
+      if (newAltitudeValue < parseFloat(mountains[this.props.index].altitude)) {
         this.setState({
             altitude: newAltitudeValue,
             backgroundPositionX: newBackgroundPositionX
@@ -21,19 +22,6 @@ class Game extends Component {
       }
       console.log(this.state.altitude)
   }
-
-//   handleEnter = (e) => {
-//       if (e.key === "Enter" && parseFloat(this.state.altitude) == 10) {
-//         let newAltitudeValue = parseFloat(this.state.altitude) - 1;
-//         let newBackgroundPositionX = parseFloat(this.state.backgroundPositionX) + .2;
-//         if (newAltitudeValue >= 0 && newAltitudeValue < parseFloat(mountains[this.props.index].altitude)) {
-//           this.setState({
-//               altitude: newAltitudeValue,
-//               backgroundPositionX: newBackgroundPositionX
-//           })
-//         }}
-//         console.log("enter")
-//   }
 
   setAltitude = (e) => {
       if (this.props.index != null && e.key !== "Enter") {
@@ -53,8 +41,9 @@ class Game extends Component {
         let viewStyle = null;
         let playerStyle = null;
         let countdown = null;
+        let reachedTop = null;
         if (this.props.index !== null && this.state.goClicked === true) {
-            countdown = (<div className="game__box__countdown">Meters left: {this.state.altitude}</div>
+            countdown = (<div className="game__box__countdown">Meters left: {parseFloat(this.state.altitude) < 0? 0 : this.state.altitude}</div>
             );
             viewStyle = {
                 backgroundImage: "url(../images/game2.jpg)",
@@ -64,13 +53,17 @@ class Game extends Component {
             };
             playerStyle = {
                 animation: "makeHikerBigger 4s forwards, centralize 1s linear infinite"
+            };
+            if (parseFloat(this.state.altitude) < 0) {
+                reachedTop = (<div className="game__top">Congratulations! You have reached the top!</div>)
             }
         }
         return (
-            <section className="game">
+            <section id="game" className="game">
+                {reachedTop}
                 <div className="flex">
                     <h2>We think you're ready. Let's play!</h2>
-                    <button onKeyUp={this.handleKeyUp} onClick={this.setAltitude}>Go!</button>
+                    <button onKeyUp={e => this.handleKeyUp(e)} onClick={this.setAltitude}>Go!</button>
                     <p>Click any key to climb | each click is equal to 100 m.a.s.l </p>
                     <section style={viewStyle}className="game__box">
                         {countdown}

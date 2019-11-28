@@ -14,8 +14,10 @@ class Motivation extends Component {
 
     render() {
         let message;
+        let arrow;
         if (parseFloat(this.state.range) === 100) {
             message = (<div className="motivation__container__msg">Wow! that is a lot!</div>)
+            arrow = (<a href="#checkmarks" onClick={e => this.props.sumUp(e)}className="motivation__container__arrow">&darr;</a>)
         }
         else if (parseFloat(this.state.range) === 1) {
             message = (<div className="motivation__container__msg">We need a little bit more from you!</div>)
@@ -28,6 +30,7 @@ class Motivation extends Component {
                     <input onChange={this.handleRange} name="range" value={this.state.range} className="slider" type="range" min="1" max="100"></input>
                 </div>
                 {message}
+                {arrow}
             </div>
         </section>
         )
