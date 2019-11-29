@@ -39,7 +39,7 @@ class Weather extends Component {
                         <div className="temperature flex">
                             <span>Temperature</span>
                             <span className="weatherArrow">&#8680;</span> 
-                            <span>{this.state.temperature}</span>          
+                            <span>{this.state.temperature} °C</span>          
                         </div>
                         <div className="pressure flex">
                             <span>Pressure</span>

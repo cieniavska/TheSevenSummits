@@ -8,7 +8,6 @@ import Location from './components/Location';
 import Presentation from './components/Presentation';
 import Weather from './components/Weather';
 import Motivation from './components/Motivation';
-import MotivationRange from './components/MotivationRange';
 import CheckMarks from './components/Checkmarks';
 import Game from './components/Game';
 

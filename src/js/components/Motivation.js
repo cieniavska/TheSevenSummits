@@ -22,6 +22,9 @@ class Motivation extends Component {
         else if (parseFloat(this.state.range) === 1) {
             message = (<div className="motivation__container__msg">We need a little bit more from you!</div>)
         }
+        else if (parseFloat(this.state.range) > 60 && parseFloat(this.state.range) < 100){
+            message = (<div className="motivation__container__msg">More, more, more! </div>)
+        }
         return (
         <section className="motivation">
             <div className="motivation__container flex">
