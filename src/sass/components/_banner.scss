@@ -1,11 +1,14 @@
 header {
-    background-image: linear-gradient(to right, rgba(255,0,0,0), rgb(163, 18, 86)),url(../images/header2.jpg);
-    opacity: .5;
+    background-image: linear-gradient(to right, #ff000000, $bannerGradient),url(../images/header2.jpg);
+    opacity: .8;
     background-size: cover;
     background-color: $banner;
     width: 100vw;
     height: 100vh;
 }
+// #a31256
+// 00b894
+// #b33939
 
 .banner {
     width: 100%;
