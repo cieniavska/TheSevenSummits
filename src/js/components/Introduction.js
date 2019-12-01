@@ -8,6 +8,8 @@ class Introduction extends Component {
         let displayText = null;
         if (this.props.arrowClicked === true) {
             displayText = (<p><Text text="Welcome! Thanks for visiting and joining the challenge :) Every big hike requires a solid preparation. There are few things that we need to check before we let you climb your summit. Scroll down if you think you are ready..."/></p>);
+        } else {
+            displayText = (<p>Scroll up and click on the arrow to see the welcome message</p>)
         }
         return (
             <section id="introduction" className="introduction">
