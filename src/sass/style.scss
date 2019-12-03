@@ -2,15 +2,16 @@
 @import './utils/fonts';
 @import './utils/reset';
 @import './utils/flex';
+@import './utils/mixins';
 
-@import './components/banner';
+
+@import './components/header';
 @import './components/introduction';
 @import './components/knowledge';
 @import './components/presentation';
 @import './components/location';
 @import './components/weather';
 @import './components/motivation';
-@import './components/motivationRange';
 @import './components/checkmarks';
 @import './components/game';
 

@@ -1,18 +1,12 @@
 .presentation {
-    width: 100vw;
-    height: 100vh;
+    @include windowFill;
     background-color: $presentation;
     background-image: linear-gradient(to right, rgba(255,0,0,0), rgb(163, 18, 86)),url(../images/presentation.jpg);
     background-size: cover;
     opacity: .7;
 
     div {
-        width: 100%;
-        height: 100%;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-
+      @include positioned;
         h2 { 
             padding: 50px;
             text-align: center;

@@ -1,14 +1,9 @@
 .motivation {
-    width: 100vw;
-    height: 100vh;
+    @include windowFill;
     background-color: $motivation;
 
     &__container {
-        width: 100%;
-        height: 100%;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
+        @include positioned;
         &__msg {
             color: $text2;
             padding: 40px;

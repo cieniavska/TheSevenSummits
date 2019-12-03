@@ -1,6 +1,5 @@
 .introduction {
-    width: 100vw;
-    height: 100vh;
+    @include windowFill;
     background-color: $introduction;
 
     div {

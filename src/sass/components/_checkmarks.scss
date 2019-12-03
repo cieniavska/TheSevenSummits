@@ -1,6 +1,5 @@
 .checkMarks {
-    width: 100vw;
-    height: 100vh;
+    @include windowFill;
     background-color: $checkmarks;
 
     .summit {
@@ -10,12 +9,7 @@
     }
 
     div {
-        width: 100%;
-        height: 100%;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-
+        @include positioned;
         h2 { 
             padding: 40px;
             text-align: center;
