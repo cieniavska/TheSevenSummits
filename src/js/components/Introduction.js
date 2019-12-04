@@ -1,7 +1,6 @@
 import React, {Component} from "react";
 import Text from "./Text";
 
-
 class Introduction extends Component {
 
     render(){

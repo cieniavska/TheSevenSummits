@@ -2,7 +2,6 @@ import React, {Component} from "react";
 import mountains from "../data/mountains";
 import Text from "./Text";
 
-
 class Knowledge extends Component {
 
     state = {
@@ -10,7 +9,6 @@ class Knowledge extends Component {
         rankingList: [],
         msg: ""
     }
-
 
     moveMountains = (item, name) => {
 
